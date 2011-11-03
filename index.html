@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.addanother.js"></script>
+</head>
+	<body>
+	<form action="http://localhost/showpostdata.php" method="post">
+	<table id="test-table">
+		<thead>
+			<tr>
+				<th>Field</th><th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="text" name="row[0][field]" /></td><td><a href="#" class="deleterow">Delete</a><td>
+			</tr>
+		</tbody>
+	</table>
+	<input type="submit" />
+	</form>
+	<input type="button" id="test-button" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#test-button').addanother( '#test-table' );
+		});
+	
+	</script>
+	</body>
+</html>
